@@ -1,5 +1,7 @@
 //  10872 - 팩토리얼
 
+package 단계별로_풀어보기.재귀;
+
 import java.util.Scanner;
 public class q10872{
     public static int factorial(int value){
