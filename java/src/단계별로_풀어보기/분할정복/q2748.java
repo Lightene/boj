@@ -1,4 +1,6 @@
-package 단계별로_풀어보기.분할정복;// 2748 - 피보나치 수 3
+// 2748 - 피보나치 수 3
+
+package 단계별로_풀어보기.분할정복;
 
 import java.util.Scanner;
 
