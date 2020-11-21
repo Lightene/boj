@@ -11,9 +11,8 @@ public class q11720 {
 
         int N = Integer.parseInt(bf.readLine());
         String[] input = bf.readLine().split("");
-
 //        if(N != input.length){}
-        
+
         int result = 0;
 
         for(String sub: input){
