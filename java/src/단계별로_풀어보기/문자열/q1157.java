@@ -24,7 +24,7 @@ public class q1157 {
             }
         }
         System.out.println(result_char);
-        
+
 //        두번째 수정한 코드
 //        Map<Character,Integer> map = new HashMap<>();
 //
