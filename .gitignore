@@ -2,5 +2,6 @@
 out/
 boj.iml
 
+.vs
 .vscode
 venv/
