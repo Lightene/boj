@@ -1,6 +1,5 @@
 package 단계별로_풀어보기.그리디;
 
-import java.io.BufferedInputStream;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;

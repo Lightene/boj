@@ -12,20 +12,21 @@ public class q10809 {
 
         int arrChar[] = new int[26];
 
-        for(int i = 0; i < arrChar.length; i++) arrChar[i] = -1;
+        for (int i = 0; i < arrChar.length; i++)
+            arrChar[i] = -1;
 
         int count = 0;
-        for(String arr : input){
-            int value = Integer.valueOf(arr.charAt(0))-97;
-            if(arrChar[value] < 0){
+        for (String arr : input) {
+            int value = Integer.valueOf(arr.charAt(0)) - 97;
+            if (arrChar[value] < 0) {
                 arrChar[value] = count;
             }
 
             count++;
         }
 
-        for(int arr : arrChar){
-            System.out.printf("%d ",arr);
+        for (int arr : arrChar) {
+            System.out.printf("%d ", arr);
         }
     }
 }
