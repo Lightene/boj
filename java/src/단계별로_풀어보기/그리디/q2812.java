@@ -8,40 +8,23 @@ import java.util.*;
 public class q2812 {
     public static void main(String[] args) throws IOException {
 
-        long start = System.currentTimeMillis();
+        long st = System.currentTimeMillis();
 
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
 
         String[] str = bf.readLine().split(" ");
-//        int N = Integer.parseInt(str[0]);
+        int N = Integer.parseInt(str[0]);
         int K = Integer.parseInt(str[1]);
 
-        int[] num =  Arrays.stream(bf.readLine().split("")).mapToInt(Integer::parseInt).toArray();
+        String number = bf.readLine();
 
 
-        List<Integer> list = new ArrayList<>();
-        list.add(num[0]);
+        Stack<Integer> stack = new Stack<>();
 
-        for(int i = 1; i < num.length; i++)
-        {
-            if(K < 0) break;
-            for(int j = i; j < num.length; j++){
-                int idx = list.size()-1;
-                if(!list.isEmpty() && num[i] > list.get(idx)){
-                    list.remove(idx);
-                    K--;
-                    break;
-                }
-            }
-            list.add(num[i]);
-        }
 
-        for(int s: list){
-            System.out.print(s);
-        }
 
         long end = System.currentTimeMillis();
-        System.out.println( "실행 시간 : " + ( end - start )/1000.0 );
+        System.out.println( "실행 시간 : " + ( end - st )/1000.0 );
     };
 
 }
