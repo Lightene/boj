@@ -26,7 +26,7 @@ public class q19598 {
 
             table.add(new int[]{first, third});
         }
-        
+
         table.sort(Comparator.comparingInt(o -> o[0]));
 
         PriorityQueue<Integer> q = new PriorityQueue<>();
