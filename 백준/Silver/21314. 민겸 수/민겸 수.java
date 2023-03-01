@@ -19,7 +19,6 @@ public class Main {
         for (String item: exam){
             if(item.equals("M")) M++;
             if(item.equals("K")){
-//                stringBuilder.append((long)( Math.pow(10,M)*5*10 )); // 소수 처리 조심
                 stringBuilder.append("5");
                 for(int i = -1; i < M; i++){
                     stringBuilder.append(0);
@@ -36,13 +35,15 @@ public class Main {
 
     public static String minimumResult(String[] exam){
         int M = -1;
-        BigInteger bigInteger = new BigInteger("10");
         StringBuilder stringBuilder = new StringBuilder();
         for(String item: exam){
             if(item.equals("M")) M++;
             if(item.equals("K")){
                 if(M > -1){
-                    stringBuilder.append(bigInteger.pow(M));
+                    stringBuilder.append(1);
+                    for (int i = 0; i < M; i++){
+                        stringBuilder.append(0);
+                    }
                 }
                 stringBuilder.append(5);
                 M = -1;
@@ -50,9 +51,11 @@ public class Main {
         }
 
         if(M > -1){
-            stringBuilder.append(bigInteger.pow(M));
+            stringBuilder.append(1);
+            for (int i = 0; i < M; i++){
+                stringBuilder.append(0);
+            }
         }
-
         return stringBuilder.toString();
     }
 
