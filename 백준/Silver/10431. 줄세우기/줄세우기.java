@@ -1,6 +1,5 @@
 import java.io.*;
 import java.util.*;
-import java.util.stream.Collectors;
 
 public class Main {
     public static void main(String[] args) throws IOException{
@@ -9,21 +8,22 @@ public class Main {
 
         for(int i = 1; i <= testcase; i++)
         {
-            ArrayList<Integer> cases = Arrays.stream(br.readLine().split(" ")).mapToInt(Integer::parseInt).boxed().collect(Collectors.toCollection(ArrayList::new));
+            int[] arr = Arrays.stream(br.readLine().split(" ")).mapToInt(Integer::parseInt).toArray();
+            int caseNumber = arr[0];
 
-            int caseNumber = cases.get(0);
-
-            cases.remove(0);
+            arr = Arrays.copyOfRange(arr, 1, arr.length);
 
             int repeat = 0;
             boolean running = true;
             while (running) {
                 running = false;
                 for (int root = 0; root < 19; root++) {
-                    if (cases.get(root) < cases.get(root + 1)) continue;
+                    if (arr[root] < arr[root+1]) continue;
                     else { // 같은 키는 없다!
                         ++repeat;
-                        Collections.swap(cases, root, root+1);
+                        int temp = arr[root];
+                        arr[root] = arr[root+1];
+                        arr[root+1] = temp;
                         running = true;
                     }
                 }
