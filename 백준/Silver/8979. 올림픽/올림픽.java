@@ -17,14 +17,14 @@ class Main {
 
         Collections.sort(list, (o1, o2) -> {
             if (o1[1] != o2[1]) {
-                return o1[1] - o2[1];
+                return o2[1] - o1[1];
             }
 
             if (o1[2] != o2[2]) {
-                return o1[2] - o2[2];
+                return o2[2] - o1[2];
             }
 
-            return o1[3] - o2[3];
+            return o2[3] - o1[3];
         });
 
         int rank = 1;
@@ -41,9 +41,11 @@ class Main {
             if (!(current[1] == next[1] &&
                     current[2] == next[2] &&
                     current[3] == next[3]) ) {
-                ++rank;
+                rank = N + 1;
             }
         }
+
+        System.out.println(list.size());
 
     }
 }
